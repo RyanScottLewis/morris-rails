@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.homepage      = "http://github.com/RyanScottLewis/#{s.name}"
   s.version       = Pathname.glob('VERSION*').first.read rescue '0.0.0'
   s.require_paths = ['lib']
-  s.files         = Dir['{{Rake,Gem}file{.lock,},README*,VERSION,LICENSE,*.gemspec,lib/morris-rails**/*.rb,spec/**/*.rb,app/**/*']
+  s.files         = Dir['{{Rake,Gem}file{.lock,},README*,VERSION,LICENSE,*.gemspec,lib/morris-rails**/*.rb,spec/**/*.rb,app/**/*}']
   s.test_files    = Dir['{examples,spec,test}/**/*']
   
 end
