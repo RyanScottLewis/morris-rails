@@ -31,11 +31,11 @@ module Rake
       end
       
       def tag
-        logger.info "Tagging as `#{version}`"
+        logger.info "Tagging as `#{version.next_version}`"
         
         run "cd #{path} && git add ."
-        run "cd #{path} && git commit -m \"Version bump to #{version}\""
-        run "cd #{path} && git tag #{version}"
+        run "cd #{path} && git commit -m \"Version bump to #{version.next_version}\""
+        run "cd #{path} && git tag #{version.next_version}"
       end
       
       def run(command, force=false)

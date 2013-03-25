@@ -5,9 +5,7 @@ module Rake
     
     class AssetVersion < Version
       
-      protected
-      
-      def new_version
+      def next_version
         project.submodule.latest_tag
       end
       

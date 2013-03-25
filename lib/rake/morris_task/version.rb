@@ -16,7 +16,7 @@ module Rake
       end
       
       def update
-        content = new_version
+        content = next_version
         logger.info "Updating `#{ path.basename }` to `#{content}`"
         
         path.open('w+') { |file| file.puts(content) } unless project.options.fake?
@@ -34,9 +34,7 @@ module Rake
         to_s == other
       end
       
-      protected
-      
-      def new_version
+      def next_version
         raise NotImplementedError
       end
       

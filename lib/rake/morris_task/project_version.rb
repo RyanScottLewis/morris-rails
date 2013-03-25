@@ -5,9 +5,7 @@ module Rake
     
     class ProjectVersion < Version
       
-      protected
-      
-      def new_version
+      def next_version
         version = to_a
         version[2] += 1
         
