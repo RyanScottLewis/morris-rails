@@ -16,9 +16,10 @@ module Rake
       end
       
       def update
-        logger.info "Updating `#{ path.basename }` to `#{project.submodule.latest_tag}`"
-      
-        path.open('w+') { |file| file.puts(new_version) } unless project.options.fake?
+        content = new_version
+        logger.info "Updating `#{ path.basename }` to `#{content}`"
+        
+        path.open('w+') { |file| file.puts(content) } unless project.options.fake?
       end
       
       def to_s

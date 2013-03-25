@@ -77,8 +77,9 @@ module Rake
           project.submodule.checkout_latest_tag
           project.submodule.copy_assets
           project.assets.version.update
-          project.version.update
         end
+        
+        project.update
       end
     end
     
