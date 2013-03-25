@@ -1,11 +1,18 @@
 require 'rake/morris_task/base'
 require 'rake/morris_task/javascripts'
 require 'rake/morris_task/stylesheets'
+require 'rake/morris_task/asset_version'
 
 module Rake
   class MorrisTask < Rake::TaskLib
     
     class Assets < Base
+      
+      attr_reader :version
+      
+      def initialize(project)
+        @project, @version = project, AssetVersion.new(project, 'ASSET-VERSION')
+      end
       
       def path
         project.path.join('app', 'assets')

@@ -1,7 +1,7 @@
 require 'fancy_logger'
 require 'rake/morris_task/options'
 require 'rake/morris_task/gemspec'
-require 'rake/morris_task/version'
+require 'rake/morris_task/project_version'
 require 'rake/morris_task/assets'
 require 'rake/morris_task/submodule'
 
@@ -17,12 +17,12 @@ module Rake
       end
       
       def setup
-        @gemspec   = Gemspec.new(self)
-        @version   = Version.new(self)
-        @assets    = Assets.new(self)
-        @submodule = Submodule.new(self)
-        @path      = options.root
-        @name      = @gemspec.basename_without_ext
+        @path          = options.root
+        @gemspec       = Gemspec.new(self)
+        @version       = ProjectVersion.new(self, 'VERSION')
+        @assets        = Assets.new(self)
+        @submodule     = Submodule.new(self)
+        @name          = @gemspec.basename_without_ext
       end
       
       def update

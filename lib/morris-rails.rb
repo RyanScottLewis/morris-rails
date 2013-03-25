@@ -1,1 +1,4 @@
-require 'morris-rails/rails'
+require 'morris-rails/engine'
+
+module MorrisRails
+end

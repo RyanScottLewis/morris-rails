@@ -24,7 +24,7 @@ module Rake
       end
       
       def updated?
-        project.version != latest_tag
+        project.assets.version != latest_tag
       end
       
       def checkout_latest_tag

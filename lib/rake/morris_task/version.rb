@@ -5,22 +5,38 @@ module Rake
     
     class Version < Base
       
+      attr_reader :name
+      
+      def initialize(project, name)
+        @project, @name = project, name
+      end
+      
       def path
-        project.path.join('VERSION')
+        project.path.join(name)
       end
       
       def update
-        logger.info "Updating `#{project.name}` to `#{project.submodule.latest_tag}`"
+        logger.info "Updating `#{ path.basename }` to `#{project.submodule.latest_tag}`"
       
-        path.open('w+') { |file| file.puts(project.submodule.latest_tag) } unless project.options.fake?
+        path.open('w+') { |file| file.puts(new_version) } unless project.options.fake?
       end
       
       def to_s
         @value ||= (path.read.strip rescue '0.0.0')
       end
       
+      def to_a
+        to_s.split(?.).collect(&:to_i)
+      end
+      
       def ==(other)
         to_s == other
+      end
+      
+      protected
+      
+      def new_version
+        raise NotImplementedError
       end
       
     end
