@@ -31,7 +31,7 @@ module Rake
       end
       
       def tag
-        logger.info "Tagging as `#{submodule.latest_tag}`"
+        logger.info "Tagging as `#{version}`"
         
         run "cd #{path} && git add ."
         run "cd #{path} && git commit -m \"Version bump to #{version}\""

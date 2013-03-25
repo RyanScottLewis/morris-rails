@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    morris-rails (0.4.2)
+    morris-rails (0.4.3)
       coffee-rails (~> 3.2)
       jquery-rails (~> 2.0)
       less-rails (~> 2.3)
