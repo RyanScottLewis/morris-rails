@@ -27,6 +27,7 @@ module Rake
       
       def update
         version.update
+        run "bundle install"
         tag if options.tag_on_update?
       end
       
