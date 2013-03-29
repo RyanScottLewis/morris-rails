@@ -1,11 +1,11 @@
 PATH
   remote: .
   specs:
-    morris-rails (0.4.8)
-      coffee-rails (~> 3.2)
+    morris-rails (0.4.9)
+      coffee-rails (~> 3.0)
       jquery-rails (~> 2.0)
-      less-rails (~> 2.3)
-      rails (~> 3.2)
+      less-rails (~> 2.0)
+      rails (~> 3.0)
       raphaeljs-rails (~> 1.0)
       version (~> 1.0)
 
