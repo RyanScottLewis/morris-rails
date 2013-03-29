@@ -10,11 +10,11 @@ Gem::Specification.new do |s|
   
   # Dependencies
   s.add_dependency 'version',          '~> 1.0'
-  s.add_dependency 'rails',            '~> 3.2'
+  s.add_dependency 'rails',            '~> 3.0'
   s.add_dependency 'jquery-rails',     '~> 2.0'
   s.add_dependency 'raphaeljs-rails',  '~> 1.0'
-  s.add_dependency 'less-rails',       '~> 2.3'
-  s.add_dependency 'coffee-rails',     '~> 3.2'
+  s.add_dependency 'less-rails',       '~> 2.0'
+  s.add_dependency 'coffee-rails',     '~> 3.0'
   s.add_development_dependency 'rake',           '~> 10.0'
   s.add_development_dependency 'fancy_logger',   '~> 0.1'
   s.add_development_dependency 'rspec',          '~> 2.13'
@@ -22,7 +22,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'sqlite3',        '~> 1.3'
   s.add_development_dependency 'execjs',         '~> 1.4'
   s.add_development_dependency 'therubyracer',   '~> 0.11'
-  s.add_development_dependency 'rspec-rails',    '~> 2.13'
   s.add_development_dependency 'rspec-rails',    '~> 2.13'
   
   # Pragmatically set variables
