@@ -4,9 +4,13 @@ Adds [morris](https://github.com/oesmith/morris.js) to the Rails 3 asset pipelin
 
 ## Install
 
-### Bundler: `gem 'morris-rails'` in `group :assets`
+### Bundler
 
-### RubyGems: `gem install morris-rails`
+`gem 'morris-rails'` in `group :assets`
+
+### RubyGems 
+
+`gem install morris-rails`
 
 ### Setup
 
