@@ -1,5 +1,7 @@
 # morris-rails
 
+> ##NOTE: Unmaintained! Please use [rails-assets-morrisjs](https://rails-assets.org/#/components/morrisjs) instead.
+
 Adds [morris](https://github.com/oesmith/morris.js) to the Rails 3 asset pipeline.
 
 ## Install
